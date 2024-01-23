@@ -1,0 +1,116 @@
+body {
+    font-family: 'Secular One', sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.logo-image {
+    width: calc(2.5vw + 2.5vh);
+    padding: calc(.25vw + .25vh) 0;
+    -webkit-transition: opacity 200ms linear;
+    -ms-transition: opacity 200ms linear;
+    transition: opacity 200ms linear;
+    opacity: 0;
+}
+
+.visible-logo {
+    opacity: 1;
+}
+
+
+header {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    padding-left: calc(1vw + 1vh);
+    padding-right: calc(.5vw + .5vh);
+    transition: .2s;
+}
+
+.logo-holder {
+    display: block;
+    margin-left: auto;
+}
+
+.links-holder {
+    display: flex;
+    justify-items: center;
+
+}
+
+.header-buttons {
+    transition: .5s;
+    border: 0;
+    padding: calc(.2vw + .2vh) calc(1vw + 1vh);
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+.header-links {
+    text-decoration: none;
+    transition: .3s;
+    color: white;
+    font-weight: 600;
+    font-size: calc(.75vw + .5vh);
+}
+
+.header-links:hover {
+    color: rgb(130, 204, 221);
+}
+.fade-bck {
+    box-shadow: 0;
+}
+.background {
+    box-shadow: 0 2px 4px -2px black;
+}
+/*SCROLLBAR
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(148, 148, 148);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(111, 111, 111);
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: linear-gradient(to bottom, rgb(173, 173, 173), rgb(255, 255, 255));
+    }
+}
